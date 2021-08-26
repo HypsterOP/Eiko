@@ -1,9 +1,10 @@
+from io import BytesIO
 import json
 import os
 import platform
 import random
 import sys
-
+from PIL import Image, ImageChops, ImageDraw, ImageFont
 import aiohttp
 import discord
 from discord.ext import commands
@@ -25,6 +26,5 @@ class info(commands.Cog, name="info"):
         Check the bot's latency.
         """
         await context.reply(f"Pong! {round(self.bot.latency * 1000)}ms")
-
 def setup(bot):
     bot.add_cog(info(bot))
