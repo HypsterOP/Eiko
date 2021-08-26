@@ -9,6 +9,9 @@ class Info(commands.Cog):
     async def on_ready():
         print("Ready Eiko")
 
-    @commands.command(aliases= 'p')
+    @commands.command()
     async def ping(self, ctx):
         await ctx.reply(f"Pong! {round(self.bot.latency * 1000)}ms")
+
+def setup(bot):
+    bot.add_cog(Info(bot))

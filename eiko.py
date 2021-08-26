@@ -8,5 +8,4 @@ class EikoBot(commands.Bot):
                 command_prefix="!!", 
                 help_command=None,
                 description="Eiko Discord bot",
-                intents = discord.Intents.all()
                  **options)
